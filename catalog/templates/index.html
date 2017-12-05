@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+  <p>Welcome to <em>Vidya</em>, your one stop shop for honnest, unpaid game reviews.</p>
+ {% for game in games %}
+    <div class="test" >
+    	<img class="Front" src="{{game.img}}">
+        <h1><a href="{{ game.get_absolute_url }}">{{ game.title }}</a></h1>
+        <p>{{ game.review|truncatechars:1000}}</p>
+        <p>published: {{ game.published_date }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}
