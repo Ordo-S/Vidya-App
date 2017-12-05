@@ -1,7 +1,9 @@
 from django.conf.urls import url
 
 from . import views
-
+urlpatterns += [
+    url(r'^catalog/', include('catalog.urls')),
+]
 
 urlpatterns = [
  	url(r'^$', views.index, name='index'),
