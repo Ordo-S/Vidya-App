@@ -2,11 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-# Text backup files
-*.bak
 
-#Database
-*.sqlite3
 # C extensions
 *.so
 
@@ -103,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Text backup files
+*.bak
+
+#Database
+*.sqlite3
