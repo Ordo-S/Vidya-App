@@ -1,1 +1,1 @@
-web: gunicorn CMPE.wsgi 
+web: gunicorn CMPE.wsgi --log file-
