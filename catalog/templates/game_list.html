@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Game List</h1>
+
+    
+    <ul>
+
+      {% for game in gamesList %}
+      <li>
+        <a href="{{ game.get_absolute_url }}">{{ game.title }}</a> ({{game.publisher}}) 
+         <font size="-2"> Released on {{game.release_date}}</font>
+      </li>
+      {% endfor %}
+
+    </ul>
+    
+{% endblock %}
