@@ -21,8 +21,7 @@ def GamesListView(request):
     gamesList = Game.objects.filter(published_date__lte=timezone.now()).order_by('-release_date')
     return render(request, 'index.html',{'gamesList': gamesList})
 
-class PublisherListView(generic.ListView):
-        model = Game
+
 
 
 def signup(request):
