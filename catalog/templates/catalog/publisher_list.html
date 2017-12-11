@@ -3,7 +3,7 @@
 {% block content %}
     <h1>Game List</h1>
 
-    {% if publisher_list %}
+   
     <ul>
 
       {% for game in publisher_list %}
@@ -13,7 +13,5 @@
       {% endfor %}
 
     </ul>
-    {% else %}
-      <p>No games have been reviewed yet.</p>
-    {% endif %}       
+    
 {% endblock %}
