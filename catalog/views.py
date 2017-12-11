@@ -17,8 +17,9 @@ def index(request):
 class GameDetailView(generic.DetailView):
     	model = Game
         
-class GamesListView(generic.ListView):
-    	model = Game
+def GamesListView(request):
+    games = Game.objects.filter(published_date__lte=timezone.now()).order_by('-release_date')
+    return render(request, 'index.html',{'games': games})
 
 class PublisherListView(generic.ListView):
         model = Game

@@ -1,14 +1,15 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>Game List</h1>
+    <h1>Publishers</h1>
 
     {% if game_list %}
     <ul>
 
-      {% for -game in game_list %}
+      {% for game in games %}
       <li>
-        <a href="{{ game.get_absolute_url }}">{{ game.title }}</a> ({{game.publisher}})
+        <a href="{{ game.get_absolute_url }}">{{ game.title }}</a> ({{game.publisher}}) 
+         <font size="-2"> Released on {{game.release_date}}</font>
       </li>
       {% endfor %}
 
