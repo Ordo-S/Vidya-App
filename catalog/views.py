@@ -20,6 +20,10 @@ class GameDetailView(generic.DetailView):
 class GamesListView(generic.ListView):
     	model = Game
 
+class Archive(MonthArchiveView):
+    queryset = Game.objects.all()
+    date_field = 'release_date'
+    allow_future = True
 
 
 def signup(request):
