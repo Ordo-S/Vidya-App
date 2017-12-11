@@ -3,10 +3,10 @@
 {% block content %}
     <h1>Game List</h1>
 
-    {% if publisher %}
+    {% if publisher_list %}
     <ul>
 
-      {% for game in publisher %}
+      {% for game in publisher_list %}
       <li>
         <a href="{{ game.url }">{{ game.publisher }}</a> 
       </li>
