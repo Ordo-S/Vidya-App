@@ -59,12 +59,3 @@ body {
 h1 a {
     color: #ff1a1a;
 }
-.banner {
-position: absolute;
-right: 0px;
-top: 0px;
-width:auto;
-height: auto;
-max-width: 700;
-max-height: 77;
-}
